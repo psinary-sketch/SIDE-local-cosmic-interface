@@ -1,0 +1,6 @@
+name = "SIDELocalCosmicInterface"
+version = "0.1.0"
+defaultTargets = ["SIDELocalCosmicInterface"]
+
+[[lean_lib]]
+name = "SIDELocalCosmicInterface"
