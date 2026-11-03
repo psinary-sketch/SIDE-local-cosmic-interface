@@ -1,6 +1,11 @@
 # SIDE-local-cosmic-interface v0.1
 
-Kernel verification of the κ gradient at the local-cosmic boundary.
+SIDE-local-cosmic-interface compiles adjacent inequalities over the file's own table. Statements at 7a62ced:
+
+    theorem em_ge_weak       : kappa_x100 .electromagnetism ≥ kappa_x100 .weak (SIDELocalCosmicInterface/Basic.lean :73)
+    theorem qm_ge_dark       : kappa_x100 .quantum_mechanics ≥ kappa_x100 .dark_sector (SIDELocalCosmicInterface/Basic.lean :79)
+
+The table kappa_x100 is an input. No statement names a physical κ or a local-cosmic boundary.
 
 ## Status
 
@@ -15,8 +20,6 @@ Companion papers: `LOCAL_COSMIC_INTERFACE_PAPER`, `SYMMETRY_FILTER_PAPER`, `MATT
 
 ## The gradient
 
-Eight observation channels from local physics to cosmological physics:
-
 | Channel | κ × 100 |
 |---|---|
 | electromagnetism | 98 |
@@ -29,8 +32,6 @@ Eight observation channels from local physics to cosmological physics:
 | dark sector | 0 |
 
 The gradient descends monotonically. The dark channel is silent (κ = 0).
-
-The gradient tracks symmetry content, not spatial or temporal distance. Gauge-invariant content crosses with high κ; symmetry-breaking content is blocked at κ = 0.
 
 ## What's verified
 
@@ -47,11 +48,9 @@ Direct κ × 100 values for each channel.
 ### §4 — P-smooth violation clustering
 - Nine bins from electroweak core to dark sector
 - `total_violations_five`: 5 violations total
-- `local_violations_zero`: 0 in local physics (200 constants across 4 bins)
 - `bridge_violations_three`: 3 at the neutrino bridge
 - `symmetric_cosmic_violations_zero`: 0 in symmetric cosmic
 - `dark_violations_two`: 2 in dark sector
-- `clustering_at_boundary`: violations are entirely at the boundary
 
 ### §5 — Neutrino bridge discriminator
 - `symmetric_params_bright`: mixing angles at κ = 100
@@ -59,12 +58,8 @@ Direct κ × 100 values for each channel.
 - `symmetry_discriminates_kappa`: isSymmetric p ↔ neutrino_kappa_x100 p = 100
 
 ### §6 — Model comparison under SIDE
-- `no_model_passes_full_SIDE`: no cosmological model passes S, I, D, E simultaneously
 - `lambda_CDM_and_programme_pass_S_and_I`
 - `CCC_TL_and_MOND_fail_I`
-
-### §7 — Federation bridges
-- `dark_channel_silent_kappa`: the κ = 0 dark channel matches `SIDE-silence-principle` and `SIDE-quaternionic-dark-sector`
 
 ### §8 — Falsification routes
 - Four routes catalogued in their own section
@@ -84,7 +79,6 @@ Self-contained — no Mathlib.
 | SIDE-omega-b | Ω_b = 4/81 |
 | SIDE-quaternionic-dark-sector | Dark/visible ratio decomposition |
 | SIDE-t7-topology-cmb | Spatial topology prediction |
-| **SIDE-local-cosmic-interface** | **The κ gradient and the symmetry filter** |
 | SIDE-silence-principle | The κ = 0 dark interface as silent foundation |
 
 ## License
@@ -97,4 +91,3 @@ CC-BY 4.0.
 
 `:: → · ← ::`
 
-*The interface is a symmetry filter. The dark region is the κ = 0 frontier.*
